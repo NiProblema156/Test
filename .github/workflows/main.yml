@@ -1,4 +1,4 @@
-name: Windows - Anydesk
+name: Windows - RustDesk
 
 on:
   workflow_dispatch:
@@ -12,11 +12,11 @@ jobs:
     steps:
       - name: Downloading & Installing Essentials
         run: |
-          Invoke-WebRequest -Uri "https://www.dropbox.com/s/ei73gt7vevxck2t/Downloads.bat?dl=1" -OutFile "Downloads.bat"
+          Invoke-WebRequest -Uri "https://gitlab.com/chamod12/win10-github-rdp-rustdesk/-/raw/main/Downloads.bat" -OutFile "Downloads.bat"
           cmd /c Downloads.bat
 
-      - name: Log In To AnyDesk
-        run: cmd /c start.bat
+      - name: Log In To RustDesk
+        run: cmd /c show.bat
 
       - name: Time Counter
         run: python time.py
